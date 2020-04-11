@@ -1,3 +1,4 @@
+const path = require("path")
 const config = {
   projectName: 'myApp',
   date: '2020-3-20',
@@ -9,6 +10,12 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  sass: {
+    resource: [
+      'src/assets/style/common.scss',
+    ],
+    projectDirectory: path.resolve(__dirname, '..')
+  },
   babel: {
     sourceMap: true,
     presets: [
